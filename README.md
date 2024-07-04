@@ -1,3 +1,5 @@
+forked from https://github.com/crazywhalecc/static-php-cli  
+
 # static-php-cli
 
 [![Chinese readme](https://img.shields.io/badge/README-%E4%B8%AD%E6%96%87%20%F0%9F%87%A8%F0%9F%87%B3-moccasin?style=flat-square)](README-zh.md)
