@@ -205,11 +205,14 @@
     },
     "igbinary": {
         "support": {
-            "Windows": "wip",
             "BSD": "wip"
         },
         "type": "external",
-        "source": "igbinary"
+        "source": "igbinary",
+        "ext-suggests": [
+            "session",
+            "apcu"
+        ]
     },
     "imagick": {
         "support": {
@@ -383,7 +386,7 @@
     },
     "opcache": {
         "type": "builtin",
-        "arg-type": "custom"
+        "arg-type-unix": "custom"
     },
     "openssl": {
         "notes": true,
@@ -537,7 +540,6 @@
     },
     "redis": {
         "support": {
-            "Windows": "wip",
             "BSD": "wip"
         },
         "type": "external",
@@ -547,7 +549,7 @@
             "session",
             "igbinary"
         ],
-        "lib-suggests": [
+        "lib-suggests-unix": [
             "zstd",
             "liblz4"
         ]
@@ -617,6 +619,19 @@
         "arg-type": "with",
         "lib-depends": [
             "libsodium"
+        ]
+    },
+    "spx": {
+        "support": {
+            "BSD": "wip",
+            "Windows": "no"
+        },
+        "notes": true,
+        "type": "external",
+        "source": "spx",
+        "arg-type": "custom",
+        "lib-depends": [
+            "zlib"
         ]
     },
     "sqlite3": {

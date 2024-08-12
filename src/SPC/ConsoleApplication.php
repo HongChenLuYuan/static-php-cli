@@ -11,6 +11,7 @@ use SPC\command\dev\AllExtCommand;
 use SPC\command\dev\ExtVerCommand;
 use SPC\command\dev\GenerateExtDocCommand;
 use SPC\command\dev\LibVerCommand;
+use SPC\command\dev\PackLibCommand;
 use SPC\command\dev\PhpVerCommand;
 use SPC\command\dev\SortConfigCommand;
 use SPC\command\DoctorCommand;
@@ -27,7 +28,7 @@ use Symfony\Component\Console\Application;
  */
 final class ConsoleApplication extends Application
 {
-    public const VERSION = '2.3.0';
+    public const VERSION = '2.3.2';
 
     public function __construct()
     {
@@ -54,6 +55,7 @@ final class ConsoleApplication extends Application
                 new ExtVerCommand(),
                 new SortConfigCommand(),
                 new GenerateExtDocCommand(),
+                new PackLibCommand(),
             ]
         );
     }
