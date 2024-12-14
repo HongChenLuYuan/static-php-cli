@@ -139,6 +139,20 @@
             "Security"
         ]
     },
+    "grpc": {
+        "source": "grpc",
+        "static-libs-unix": [
+            "libgrpc.a",
+            "libcares.a"
+        ],
+        "lib-depends": [
+            "zlib",
+            "openssl"
+        ],
+        "frameworks": [
+            "CoreFoundation"
+        ]
+    },
     "icu": {
         "source": "icu",
         "cpp-library": true,
@@ -543,6 +557,18 @@
     },
     "pkg-config": {
         "source": "pkg-config"
+    },
+    "librdkafka": {
+        "source": "librdkafka",
+        "static-libs-unix": [
+            "librdkafka.a",
+            "librdkafka++.a",
+            "librdkafka-static.a"
+        ],
+        "cpp-library": true,
+        "lib-suggests": [
+            "zstd"
+        ]
     },
     "postgresql": {
         "source": "postgresql",
