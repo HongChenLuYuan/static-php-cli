@@ -21,9 +21,9 @@ $test_php_version = [
 
 // test os (macos-13, macos-14, ubuntu-latest, windows-latest are available)
 $test_os = [
-    // 'macos-14',
-    'macos-13',
-    // 'ubuntu-latest',
+    'macos-14',
+    // 'macos-13',
+    'ubuntu-latest',
 ];
 
 // whether enable thread safe
@@ -35,12 +35,12 @@ $no_strip = false;
 $upx = false;
 
 // prefer downloading pre-built packages to speed up the build process
-$prefer_pre_built = true;
+$prefer_pre_built = false;
 
 // If you want to test your added extensions and libs, add below (comma separated, example `bcmath,openssl`).
 $extensions = match (PHP_OS_FAMILY) {
-    'Linux', 'Darwin' => 'rdkafka',
-    'Windows' => 'zlib',
+    'Linux', 'Darwin' => 'openssl',
+    'Windows' => 'openssl',
 };
 
 // If you want to test lib-suggests feature with extension, add them below (comma separated, example `libwebp,libavif`).
@@ -53,7 +53,7 @@ $with_libs = match (PHP_OS_FAMILY) {
 // You can use `common`, `bulk`, `minimal` or `none`.
 // note: combination is only available for *nix platform. Windows must use `none` combination
 $base_combination = match (PHP_OS_FAMILY) {
-    'Linux', 'Darwin' => 'bulk',
+    'Linux', 'Darwin' => 'minimal',
     'Windows' => 'none',
 };
 
